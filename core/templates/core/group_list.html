@@ -1,0 +1,20 @@
+{% extends 'core/index.html' %}
+{% block content %}
+    <header>
+        <h1 style = "text-align: center">Groups</h1>
+    </header>
+    <div class="list-group mx-auto mt-5 w-75">
+        {% for group in groups %}
+            <label class="list-group-item mx-auto border-0 border-bottom w-100 text-center">
+                <a href = "{% url 'task_list' group.name %}" class = "link-secondary">{{ group }}</a>
+                <a href = "{% url 'group_delete' group.name%}"><span id="boot-icon" class="bi bi-trash"  style="color: rgb(112, 0, 0);"></span></a>  
+            </label>
+        {% endfor %}
+        <label class="list-group-item mx-auto border-0 mt-3">
+        <a href = "{% url 'group_create' %}" class="list-group"><span class="bi bi-plus-lg" style="color: rgb(17, 180, 0);"></span></a>
+        </label>
+    </div>
+    <footer>
+        <a href="{%url 'home'%}"><span id="boot-icon" class="bi bi-house" style="font-size: 3rem; color: rgb(105, 105, 105);"></span></a>
+    </footer>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'core/index.html' %}
+
+{% block content %}
+    <h1>Create a Task</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" value="Create">
+        <a href = "{% url 'task_list' group_name %}">Cancel</a>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'core/index.html' %}
+
+{% block content %}
+    <h1>Create a Group</h1>
+    <form method = "POST" action = ''>
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" value="Create">
+        <a href= "{% url 'group_list' %}">Cancel</a>
+    </form>
+{% endblock content%}

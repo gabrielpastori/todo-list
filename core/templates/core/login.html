@@ -1,0 +1,13 @@
+{% extends 'core/index.html' %}
+
+{% block content %}
+<h1>Login</h1>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login" class = 'btn btn-primary'>
+    </form>
+</div>
+<p>Don't have an account? <a href="{% url 'register' %}" class = "primary-link">Register</a></p>
+{% endblock content %}
