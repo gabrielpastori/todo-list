@@ -1,15 +1,20 @@
-{% extends 'core/index.html' %}
-
+{% extends "core/index.html" %}
 {% block content %}
     <h2>Task: {{ task.title }}</h2>
-    <p>Task Creation Date: {{ task.created|date:"d/M/y - h:m:s"}}</p>
+    <p>Task Creation Date: {{ task.created|date:"d/M/y - h:m:s" }}</p>
     <p>Task Description: {{ task.description }}</p>
-    {% if task.complete%}
-        <p>Task Complete? <span class="bi bi-check2-circle" style="color: rgb(0, 128, 55);"></span></p>
+    {% if task.complete %}
+        <p>
+            Task Complete? <span class="bi bi-check2-circle"></span>
+        </p>
     {% else %}
-        <p>Task Complete? <span id="boot-icon" class="bi bi-x-circle" style="color: rgb(255, 0, 0);"></span></p>
+        <p>
+            Task Complete? <span id="boot-icon" class="bi bi-x-circle"></span>
+        </p>
     {% endif %}
     <footer>
-        <a href="{% url 'task_list' group_name %}"><span class="bi bi-arrow-left-circle" style="font-size: 3rem; color: rgb(105, 105, 105);"></span></a>
+        <a href="{% url 'task_list' group_name %}"><span class="bi bi-arrow-left-circle"
+      style="font-size: 3rem;
+             color: rgb(105, 105, 105)"></span></a>
     </footer>
 {% endblock content %}

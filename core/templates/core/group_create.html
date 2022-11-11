@@ -1,12 +1,10 @@
-{% extends 'core/index.html' %}
-
+{% extends "core/index.html" %}
 {% block content %}
     <h3>Create a Group</h3>
-    <form method = "POST" action = ''>
+    <form method="post" action=''>
         {% csrf_token %}
         {{ form }}
-
-        <input type="submit" value="Create" class="btn btn-primary mt-3">
-        <a href= "{% url 'group_list' %}" class="btn btn-light mt-3">Cancel</a>
+        <input type="submit" value="Create" class="btn btn-primary mt-3"/>
+        <a href="{% url 'group_list' %}" class="btn btn-light mt-3">Cancel</a>
     </form>
-{% endblock content%}
+{% endblock content %}

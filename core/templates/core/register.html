@@ -1,15 +1,14 @@
-{% extends 'core/index.html' %}
-
+{% extends "core/index.html" %}
 {% block content %}
-<h1>Register</h1>
-
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class = "btn btn-primary"  value="Register">
-    </form>
-</div>
-
-<p>Already have an account? <a href="{% url 'login' %}" class = "link-primary">Login</a></p>
+    <h1>Register</h1>
+    <div class="form-group">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Register"/>
+        </form>
+    </div>
+    <p>
+        Already have an account? <a href="{% url 'login' %}" class="link-primary">Login</a>
+    </p>
 {% endblock content %}
