@@ -1,7 +1,7 @@
 # Todo list
 This project was built with the intention of training/learning Django. <br/>
 I tried to create the most without using generics. <br/>
-It has user separation, search filter, unit testing, and other features of a common todo-app.
+It has user separation, search filter, data modeling, unit testing, and other features of a common todo-app.
 <br/>
 <br/>
 
